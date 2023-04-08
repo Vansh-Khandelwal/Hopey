@@ -13,6 +13,8 @@ const Cart = () => {
 
     const products = useSelector(state=>state.Cart.products);
 
+    console.log(products);
+
     const dispatch = useDispatch();
 
     const totalPrice = () => {
