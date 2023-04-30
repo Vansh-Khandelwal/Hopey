@@ -46,7 +46,7 @@
         h3 {
             font-style: 18px;
             font-weight: 500;
-            &:first-child {
+            .oldPrice {
                 color: gray;
                 text-decoration: line-through;
             }
