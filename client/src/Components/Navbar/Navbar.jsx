@@ -52,7 +52,7 @@ const Navbar = () => {
         </div>
 
         <div className="center">
-            <Link className="link" to="/">Name</Link>
+            <Link className="link" to="/">Hopey</Link>
         </div>
 
         <div className="right">
