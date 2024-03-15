@@ -10,7 +10,7 @@ const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const data = ["https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/346/posts/31518/image/teemock2.jpg",
-                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaUdHuaIhQEKalnwNQu_WZJplJnVZoReDX-Q&usqp=CAU",]
+        "https://m.media-amazon.com/images/I/61kRbq+iylL._AC_UF894,1000_QL80_.jpg"]
 
     const prevSlide = () => {
         setCurrentSlide(currentSlide===0?data.length-1:currentSlide-1);
