@@ -21,3 +21,14 @@
         gap: 50px;
     }
 }
+
+@media screen and (max-width: 780px) {
+    .featured-products {
+        width: 100%;
+        margin: 100px 10px;
+        .top {
+            flex-direction: column;
+            flex: auto;
+        }
+    }
+}

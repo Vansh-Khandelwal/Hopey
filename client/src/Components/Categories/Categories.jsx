@@ -64,7 +64,7 @@ const Categories = () => {
                         Accessories
                     </Link>
                 </button>
-                  <img src="https://img.freepik.com/free-photo/top-view-accessoires-travel-with-man-clothing-concept-bow-tie-wallet-wooden-background-watch-sunglasses-bag-hat-shoes-wood-table_1921-89.jpg?w=996&t=st=1710495975~exp=1710496575~hmac=dd609d4dfe441e9434a33807031e8f7e4544106ffe0b503b8b8660e09c94cd43" alt="Accessories Cover Image" /></div>
+                  <img src="https://img.freepik.com/free-photo/top-view-accessoires-travel-with-women-clothing-concept-white-mobilephone-watch-bag-hat-map-camera-necklace-trousers-sunglasses-white-wood-table_1921-106.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710288000&semt=ais" alt="Accessories Cover Image" /></div>
         </div>
     </div>
   )
