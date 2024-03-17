@@ -58,14 +58,23 @@
 @media screen and (max-width:780px) {
     .navbar {
         padding: 10px;
+        height: max-content;
         .wrapper {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             .left,
             .right {
-                width: 100%;
                 justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .left {
+                gap: 12px;
+            }
+            .right {
+                .icons {
+                    gap: 1rem;
+                }
             }
         }
     }

@@ -43,6 +43,16 @@
     }
 }
 
+@media screen and (max-width: 780px) {
+    .categories {
+        .row {
+            button {
+                padding: 5px;
+            }
+        }
+    }
+}
+
 // .categories:hover {
 //     .row {
 //         img {
