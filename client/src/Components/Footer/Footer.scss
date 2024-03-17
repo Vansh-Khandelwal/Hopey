@@ -57,6 +57,11 @@
         .bottom {
             gap: 20px;
             flex-direction: column;
+            .right {
+                img {
+                    width: 95%;
+                }
+            }
         }
     }
 }
