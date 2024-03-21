@@ -1,5 +1,6 @@
 const path = require('path');
 
+// Supabase Database integration
 module.exports = ({ env }) => ({
     connection: {
         client: "postgres",
