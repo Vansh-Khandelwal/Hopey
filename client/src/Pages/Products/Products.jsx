@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useParams } from 'react-router';
 
@@ -24,7 +24,9 @@ const Products = () => {
     setSelectedSubCats(isChecked? [...selectedSubCats, value]:selectedSubCats.filter((item)=>item!==value));
   };
 
-  console.log(selectedSubCats);
+  useEffect(() => {
+    console.log(data);
+  }, [data])
 
   return (
     <div className="products">
