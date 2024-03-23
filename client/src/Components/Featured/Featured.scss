@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 830px) {
     .featured-products {
         width: 100%;
         margin: 100px 10px;
@@ -32,7 +32,7 @@
         }
         .bottom {
             flex-wrap: wrap;
-            gap: 0px;
+            gap: 10px;
         }
     }
 }

@@ -65,7 +65,7 @@ const Product = () => {
               <AddShoppingCartIcon/> ADD TO CART
             </div>
 
-            <div className="links">
+              {/* <div className="links">
 
               <div className="item">
                 <FavoriteBorderIcon/> ADD TO WISH LIST
@@ -75,7 +75,7 @@ const Product = () => {
                 <BalanceIcon/> ADD TO COMPARE
               </div>
 
-            </div>
+            </div> */}
 
             <div className="info">
               <span>Vendor: Polo</span>
@@ -95,7 +95,7 @@ const Product = () => {
             <div className="productDesc">
               <h2>DESCRIPTION</h2>
               <hr />
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ipsam, quo praesentium sequi officiis rem maiores, similique voluptatum corporis perferendis neque dolores natus ratione totam odit ab deleniti sed! Modi.</p>
+                <p>{data?.attributes?.desc}</p>
             </div>
 
             <div className="productAdditionalInfo">
@@ -104,10 +104,10 @@ const Product = () => {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ea rem nesciunt commodi fugit repudiandae sint voluptate illum deserunt optio accusantium quia error quasi, magnam, minus similique ducimus ipsam aliquam.</p>
             </div>
 
-            <div className="productFAQs">
+              {/* <div className="productFAQs">
               <h2>FAQ</h2>
               <hr />
-            </div>
+            </div> */}
             
           </div>
         </div>  

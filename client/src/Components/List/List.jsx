@@ -1,5 +1,4 @@
-import React from 'react'
-import qs from 'qs'
+import React, { useEffect } from 'react'
 
 import useFetch from '../../Hooks/useFetch.js';
 
@@ -10,46 +9,18 @@ import './List.scss';
 const List = ({subCats, maxPrice, sort, catId}) => {
 
     // Query building
-    const query = qs.stringify({
-        filters: {
-            categories: {
-                id: {
-                    $eq: catId
-                }
-            },
-            price: {
-                $lte: maxPrice
-            }
-        },
-        sort: {
-            price: sort
-        }
-        // $or: [
-        //     {
-        //         date: {
-        //             $eq: '2020-01-01',
-        //         },
-        //     },
-        //     {
-        //         date: {
-        //             $eq: '2020-01-02',
-        //         },
-        //     },
-        // ],
-        // author: {
-        //     name: {
-        //         $eq: 'Kai doe',
-        //     },
-        // },
-    }, {
-        encodeValuesOnly: true, // prettify URL
-    });
 
-    const hardcodeQuery = `/products?populate=*&[filter][categories][id][$eq]=${catId}${subCats.map(item => `&[filters][sub_categories][id][$eq]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+    // const hardcodeQuery = `/products?populate=*&[filters][categories][id][$eq]=${catId}${subCats.map(item => `&[filters][sub_categories][id][$eq]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+    const hardcodeQuery = `/products?populate=*&[filters][categories][id][$eq]=${catId}${subCats.length ? `&[filters][sub_categories][id][$in]=${subCats}` : ``}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
 
     const { data, loading, error } = useFetch(
         hardcodeQuery
     );
+
+    // useEffect(() => {
+    //     console.log(hardcodeQuery)
+    // }, [subCats, hardcodeQuery])
+
 
     return (
         <div className="list">
