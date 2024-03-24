@@ -83,7 +83,11 @@ const Products = () => {
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaUdHuaIhQEKalnwNQu_WZJplJnVZoReDX-Q&usqp=CAU" alt="" className="categoryImg"/>
 
         {
-          error ? "Something is Wrong!!" : loading ? "Loading" : <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />
+          catId ?
+            error ?
+              "Something is Wrong!!" : loading ?
+                "Loading" : <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} /> :
+            <List maxPrice={maxPrice} sort={sort} />
         }
 
       </div>
