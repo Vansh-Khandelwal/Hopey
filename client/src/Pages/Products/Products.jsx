@@ -24,9 +24,10 @@ const Products = () => {
     setSelectedSubCats(isChecked? [...selectedSubCats, value]:selectedSubCats.filter((item)=>item!==value));
   };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data])
+  // useEffect(() => {
+  //   console.log(catId)
+  //   console.log(data);
+  // }, [data])
 
   return (
     <div className="products">
@@ -87,7 +88,7 @@ const Products = () => {
             error ?
               "Something is Wrong!!" : loading ?
                 "Loading" : <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} /> :
-            <List maxPrice={maxPrice} sort={sort} />
+            <List maxPrice={maxPrice} sort={sort} catId={catId} subCats={selectedSubCats} />
         }
 
       </div>
