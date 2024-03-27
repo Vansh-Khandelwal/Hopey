@@ -8,6 +8,8 @@ import './List.scss';
 
 const List = ({subCats, maxPrice, sort, catId}) => {
 
+    // Edit:Take the query selection in products.jsx
+
     // Query building
     const [hardcodeQuery, sethardcodeQuery] = useState(`/products?populate=*`)
 
