@@ -8,7 +8,7 @@ import List from '../../Components/List/List.jsx';
 
 import './Products.scss';
 
-const Products = () => {
+const Products = ({ isNew }) => {
 
   const catId = parseInt(useParams().id);
   const [maxPrice, setmaxPrice] = useState(1000);
@@ -18,7 +18,7 @@ const Products = () => {
   // Query building
   const [hardcodeQuery, sethardcodeQuery] = useState(`/products?populate=*`)
 
-  const { data, loading, error } = useFetch(`/sub-categories?[filters][category][id][$eq]=${catId}`);
+  const { data, loading, error } = useFetch(isNew ? `/sub-categories` : `/sub-categories?[filters][category][id][$eq]=${catId}`);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -27,21 +27,22 @@ const Products = () => {
     setSelectedSubCats(isChecked? [...selectedSubCats, value]:selectedSubCats.filter((item)=>item!==value));
   };
 
-  // const hardcodeQuery = `/products?populate=*&[filters][categories][id][$eq]=${catId}${subCats.map(item => `&[filters][sub_categories][id][$eq]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+  // Implementing Sub category filters
   useEffect(() => {
+    // console.log(isNew)
     if (catId) {
-      sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}${selectedSubCats.map(item => `&[filters][sub_categories][id][$in]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
-      // sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}${selectedSubCats.length ? `&[filters][sub_categories][id][$in]=${selectedSubCats}` : ``}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
+      let q = ''
+      for (var i = 0; i < selectedSubCats.length; i++) {
+        q += `&[filters][sub_categories][id][$in]=${selectedSubCats[i]}`
+      }
+      sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}` + q + `&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
+    } else if (isNew) {
+      sethardcodeQuery(`/products?populate=*&[filters][isNew][$eq]=${isNew}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
     } else {
       sethardcodeQuery(`/products?populate=*`)
     }
-    console.log(hardcodeQuery)
-  }, [selectedSubCats, catId, maxPrice, sort])
-
-  // useEffect(() => {
-  //   console.log(catId)
-  //   console.log(data);
-  // }, [data])
+    // console.log(hardcodeQuery)
+  }, [selectedSubCats, catId, maxPrice, sort, isNew])
 
   return (
     <div className="products">
@@ -52,7 +53,7 @@ const Products = () => {
 
           <h2>Product Categories</h2>
 
-          {data?.map((item)=>(
+          {isNew ? "No Sub Category Available for this Category" : data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
               <label htmlFor={item.id}>{item.attributes.title}</label>
@@ -101,8 +102,8 @@ const Products = () => {
           catId ?
             error ?
               "Something is Wrong!!" : loading ?
-                "Loading" : <List hardcodeQuery={hardcodeQuery} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} /> :
-            <List maxPrice={maxPrice} sort={sort} hardcodeQuery={hardcodeQuery} subCats={selectedSubCats} />
+                "Loading" : <List hardcodeQuery={hardcodeQuery} /> :
+            <List hardcodeQuery={hardcodeQuery} />
         }
 
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import useFetch from '../../Hooks/useFetch.js';
 
@@ -6,7 +6,7 @@ import Card from '../Card/Card.jsx';
 
 import './List.scss';
 
-const List = ({ subCats, maxPrice, sort, hardcodeQuery }) => {
+const List = ({ hardcodeQuery }) => {
 
     const { data, loading, error } = useFetch(
         hardcodeQuery

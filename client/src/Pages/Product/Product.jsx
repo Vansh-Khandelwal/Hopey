@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import BalanceIcon from '@mui/icons-material/Balance';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import BalanceIcon from '@mui/icons-material/Balance';
 
 import useFetch from '../../Hooks/useFetch.js';
 
@@ -24,7 +24,7 @@ const Product = () => {
     `/products/${id}?populate=*`
   );
 
-  console.log(data);
+  // console.log(data);
   
   return (
     <div className="product">

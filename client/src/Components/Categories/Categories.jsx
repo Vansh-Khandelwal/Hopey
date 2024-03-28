@@ -28,7 +28,7 @@ const Categories = () => {
         <div className="col">
             <div className="row">
                 <button>
-                      <Link to="/products/" className="link">
+                      <Link to="/products/new" className="link">
                         New Season
                     </Link>
                 </button>
