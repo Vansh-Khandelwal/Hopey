@@ -15,6 +15,9 @@ const Products = () => {
   const [sort, setSort] = useState("asc");
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
+  // Query building
+  const [hardcodeQuery, sethardcodeQuery] = useState(`/products?populate=*`)
+
   const { data, loading, error } = useFetch(`/sub-categories?[filters][category][id][$eq]=${catId}`);
 
   const handleChange = (e) => {
@@ -23,6 +26,17 @@ const Products = () => {
 
     setSelectedSubCats(isChecked? [...selectedSubCats, value]:selectedSubCats.filter((item)=>item!==value));
   };
+
+  // const hardcodeQuery = `/products?populate=*&[filters][categories][id][$eq]=${catId}${subCats.map(item => `&[filters][sub_categories][id][$eq]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
+  useEffect(() => {
+    if (catId) {
+      sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}${selectedSubCats.map(item => `&[filters][sub_categories][id][$in]=${item}`)}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
+      // sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}${selectedSubCats.length ? `&[filters][sub_categories][id][$in]=${selectedSubCats}` : ``}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
+    } else {
+      sethardcodeQuery(`/products?populate=*`)
+    }
+    console.log(hardcodeQuery)
+  }, [selectedSubCats, catId, maxPrice, sort])
 
   // useEffect(() => {
   //   console.log(catId)
@@ -87,8 +101,8 @@ const Products = () => {
           catId ?
             error ?
               "Something is Wrong!!" : loading ?
-                "Loading" : <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} /> :
-            <List maxPrice={maxPrice} sort={sort} catId={catId} subCats={selectedSubCats} />
+                "Loading" : <List hardcodeQuery={hardcodeQuery} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} /> :
+            <List maxPrice={maxPrice} sort={sort} hardcodeQuery={hardcodeQuery} subCats={selectedSubCats} />
         }
 
       </div>
