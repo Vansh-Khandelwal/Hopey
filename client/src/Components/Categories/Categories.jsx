@@ -50,7 +50,7 @@ const Categories = () => {
                 <div className="col">
                     <div className="row">
                         <button>
-                              <Link to="/products/5" className="link">
+                              <Link to="/products/sale" className="link">
                                 Sale
                             </Link>
                         </button>

@@ -9,7 +9,7 @@ import './List.scss';
 const List = ({ hardcodeQuery }) => {
 
     const { data, loading, error } = useFetch(
-        hardcodeQuery
+        hardcodeQuery 
     );
 
     // console.log(data)

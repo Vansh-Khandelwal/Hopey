@@ -15,8 +15,9 @@ const Card = ({item}) => {
             </div>
         <h2>{item?.attributes.title}</h2>
             <div className="prices">
-                {item?.attributes.oldPrice?<h3 className='oldPrice'>${item?.attributes.oldPrice}</h3>:<></>}
-                <h3>${item?.attributes.price}</h3>
+          {item?.attributes.onSale ? <><strike><h3>${item?.attributes.price}</h3></strike> <h3>${item?.attributes.Sale_Price}</h3> </> :
+            // {item?.attributes.oldPrice?<h3 className='oldPrice'>${item?.attributes.oldPrice}</h3>:<></>}
+            <h3>${item?.attributes.price}</h3>}
             </div>
         </div>
     </Link>

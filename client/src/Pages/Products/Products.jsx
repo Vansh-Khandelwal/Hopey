@@ -8,7 +8,7 @@ import List from '../../Components/List/List.jsx';
 
 import './Products.scss';
 
-const Products = ({ isNew }) => {
+const Products = ({ isNew, isSale }) => {
 
   const catId = parseInt(useParams().id);
   const [maxPrice, setmaxPrice] = useState(1000);
@@ -16,9 +16,9 @@ const Products = ({ isNew }) => {
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   // Query building
-  const [hardcodeQuery, sethardcodeQuery] = useState(`/products?populate=*`)
+  const [hardcodeQuery, sethardcodeQuery] = useState(``)
 
-  const { data, loading, error } = useFetch(isNew ? `/sub-categories` : `/sub-categories?[filters][category][id][$eq]=${catId}`);
+  const { data, loading, error } = useFetch(isNew || isSale ? `/sub-categories` : `/sub-categories?[filters][category][id][$eq]=${catId}`);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -38,11 +38,11 @@ const Products = ({ isNew }) => {
       sethardcodeQuery(`/products?populate=*&[filters][categories][id][$eq]=${catId}` + q + `&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
     } else if (isNew) {
       sethardcodeQuery(`/products?populate=*&[filters][isNew][$eq]=${isNew}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
-    } else {
-      sethardcodeQuery(`/products?populate=*`)
+    } else if (isSale) {
+      sethardcodeQuery(`/products?populate=*&[filters][onSale][$eq]=${isSale}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`)
     }
     // console.log(hardcodeQuery)
-  }, [selectedSubCats, catId, maxPrice, sort, isNew])
+  }, [selectedSubCats, catId, maxPrice, sort, isNew, isSale])
 
   return (
     <div className="products">
@@ -53,7 +53,7 @@ const Products = ({ isNew }) => {
 
           <h2>Product Categories</h2>
 
-          {isNew ? "No Sub Category Available for this Category" : data?.map((item) => (
+          {isNew || isSale ? "No Sub Category Available for this Category" : error ? "Something went wrong" : loading ? "Loading" : data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
               <label htmlFor={item.id}>{item.attributes.title}</label>
@@ -98,13 +98,7 @@ const Products = ({ isNew }) => {
 
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaUdHuaIhQEKalnwNQu_WZJplJnVZoReDX-Q&usqp=CAU" alt="" className="categoryImg"/>
 
-        {
-          catId ?
-            error ?
-              "Something is Wrong!!" : loading ?
-                "Loading" : <List hardcodeQuery={hardcodeQuery} /> :
-            <List hardcodeQuery={hardcodeQuery} />
-        }
+        {hardcodeQuery ? <List hardcodeQuery={hardcodeQuery} /> : "Loading"}
 
       </div>
 

@@ -66,6 +66,15 @@
         "Featured",
         "Trending"
       ]
+    },
+    "onSale": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "Sale_Price": {
+      "type": "float",
+      "required": false
     }
   }
 }
