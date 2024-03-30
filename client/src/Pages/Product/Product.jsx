@@ -44,7 +44,8 @@ const Product = () => {
           <div className="right">
 
             <h1>{data?.attributes?.title}</h1>
-              <span className="price">$ {data?.attributes?.price}</span>
+              {data?.attributes?.onSale ? <><strike className="price" style={{ color: "black" }}>$ {data?.attributes?.price}</strike> <span className="price">$ {data?.attributes?.Sale_Price}</span></> :
+                <span className="price">$ {data?.attributes?.price}</span>}
             <p>
               {data?.attributes?.desc}
             </p>

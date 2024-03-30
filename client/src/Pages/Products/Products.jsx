@@ -47,6 +47,11 @@ const Products = ({ isNew, isSale }) => {
   return (
     <div className="products">
 
+      <div className="filters">
+        <input type="checkbox" name="filters" id="filters-input" />
+        <label htmlFor="filters-input" className='filters-txt'>Filters</label>
+      </div>
+
       <div className="left">
 
         <div className="filterItem">

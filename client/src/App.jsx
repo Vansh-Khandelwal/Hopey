@@ -1,4 +1,6 @@
 import './App.scss';
+import { useState, useEffect } from 'react';
+// import { MdCancel } from "react-icons/md";
 
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Footer from './Components/Footer/Footer.jsx';
@@ -13,9 +15,22 @@ import {
 } from "react-router-dom";
 
 const Layout = () =>{
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      setTimeout(() => {
+        setVisible(false)
+      }, 4000);
+    }
+  }, [visible])
   return (
     <div className="app">
       <Navbar/>
+      <div className="alert-info" style={visible ? { display: "flex" } : { display: "none" }} onClose={() => setVisible(false)}>
+        This feature is not yet added
+        {/* <MdCancel onClick={() => setVisible(false)} /> */}
+      </div>
       <Outlet/>
       <Footer/>
     </div>

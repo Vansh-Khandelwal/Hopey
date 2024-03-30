@@ -1,6 +1,9 @@
 .products {
     display: flex;
     padding: 30px 50px;
+    .filters {
+        display: none;
+    }
     .left {
         flex: 1;
         height: 100%;
@@ -19,6 +22,9 @@
                 }
             }
         }
+        // #filters-input:checked+& {
+        //     display: none;
+        // }
     }
     .right {
         flex: 3;
@@ -34,7 +40,28 @@
 @media screen and (max-width: 830px) {
     .products {
         flex-direction: column;
-        // .left {
-        // }
+        .filters {
+            // flex: 1;
+            display: block;
+            .filters-txt {
+                justify-content: center;
+                align-items: center;
+                padding: 0.8rem;
+                display: block;
+                font-size: 1.4rem;
+                text-align: center;
+                background-color: #2879fe;
+                color: white;
+            }
+        }
+        #filters-input:checked+.left {
+            display: none;
+        }
+        .left {
+            flex: auto;
+            // #filters-input:checked+& {
+            //     display: none;
+            // }
+        }
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 const Footer = () => {
@@ -8,10 +9,24 @@ const Footer = () => {
       <div className="top">
         <div className="item">
           <h1>Categories</h1>
-          <span>Men</span>
-          <span>Women</span>
-          <span>Children</span>
-          <span>Accessories</span>
+          <Link to="/products/1" className="link">
+            Men
+          </Link>
+          <Link to="/products/2" className="link">
+            Women
+          </Link>
+          <Link to="/products/3" className="link">
+            Children
+          </Link>
+          <Link to="/products/4" className="link">
+            Accessories
+          </Link>
+          <Link to="/products/new" className="link">
+            New Season
+          </Link>
+          <Link to="/products/sale" className="link">
+            Sale
+          </Link>
         </div>
         <div className="item">
           <h1>Links</h1>
@@ -23,7 +38,13 @@ const Footer = () => {
         <div className="item">
           <h1>About</h1>
           <span>
-            Welcome to our premier e-commerce platform, offering a curated selection of fashion products for men, women, and kids, alongside stylish accessories. Explore our diverse catalog, featuring the latest trends and timeless classics from top brands and designers worldwide. From chic apparel to trendy footwear and accessories, find everything you need to elevate your style effortlessly. With seamless navigation, secure transactions, and prompt delivery, we ensure a hassle-free shopping experience. Discover unparalleled convenience and exceptional quality at our e-commerce platform today.
+            Introducing our dummy e-commerce platform - a demonstrative website built to showcase modern online shopping features. While not a fully functional retail site, it offers a comprehensive overview of e-commerce capabilities.
+            <br />
+            Our platform boasts an intuitive admin panel, simplifying product management from creation to inventory updates. With user-friendly controls, it illustrates how effortless managing an online store can be.
+            <br />
+            Moreover, we've integrated a secure payment gateway, facilitating safe transactions in a simulated environment. Powered by React for dynamic interfaces, Strapi for backend content management, and Supabase for database functionality, our platform highlights seamless technology integration.
+            <br />
+            Designed for developers seeking learning opportunities or business owners exploring e-commerce solutions, our dummy website provides valuable insights into online retail operations. Experience the potential of e-commerce with our demonstration platform today.
           </span>
         </div>
         <div className="item">
