@@ -50,7 +50,6 @@ const Products = ({ isNew, isSale }) => {
       <div className="filters">
         <input type="checkbox" name="filters" id="filters-input" />
         <label htmlFor="filters-input" className='filters-txt'>Filters</label>
-      </div>
 
       <div className="left">
 
@@ -96,6 +95,8 @@ const Products = ({ isNew, isSale }) => {
           </div>
 
         </div>
+
+      </div>
 
       </div>
 
