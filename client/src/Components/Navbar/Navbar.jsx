@@ -57,15 +57,15 @@ const Navbar = () => {
           </div>
 
           <div className="item">
-            <Link className="link" to="/About" >About</Link>
+            <Link className="link" to="#About" >About</Link>
           </div>
 
           <div className="item">
-            <Link className="link" to="/Contact" >Contact</Link>
+            <Link className="link" to="#Contact" >Contact</Link>
           </div>
 
           <div className="item">
-            <Link className="link" to="/Stores" >Stores</Link>
+            <Link className="link" to="#Stores" >Stores</Link>
           </div>
 
           <div className="icons">
