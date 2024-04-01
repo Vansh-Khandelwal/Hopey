@@ -53,3 +53,9 @@
         }
     }
 }
+
+@media screen and (max-width:560px) {
+    .card {
+        min-width: 325px;
+    }
+}

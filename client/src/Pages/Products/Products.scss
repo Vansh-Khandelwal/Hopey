@@ -2,17 +2,16 @@
     display: flex;
     padding: 30px 50px;
     .filters {
-        // flex: 1;
         display: block;
         padding-right: 1rem;
-        // #filters-input {
-        //     display: none;
-        // }
+        #filters-input {
+            display: none;
+        }
         .filters-txt {
+            display: none;
             justify-content: center;
             align-items: center;
             padding: 0.8rem;
-            display: block;
             font-size: 1.4rem;
             text-align: center;
             background-color: #2879fe;
@@ -37,9 +36,6 @@
                     }
                 }
             }
-            // #filters-input:checked+& {
-            //     display: none;
-            // }
         }
     }
     .right {
@@ -53,22 +49,19 @@
     }
 }
 
+#filters-input:checked~.left {
+    display: none;
+}
+
 @media screen and (max-width: 830px) {
     .products {
         flex-direction: column;
-        #filters-input {
-            &:checked {
-                +.left {
-                    display: none;
-                }
+        padding: 10px 20px;
+        .filters {
+            padding: 0;
+            .filters-txt {
+                display: block;
             }
         }
-        // .left {
-        //     flex: auto;
-        //     display: block;
-        //     // #filters-input:checked+& {
-        //     //     display: block;
-        //     // }
-        // }
     }
 }

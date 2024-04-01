@@ -48,7 +48,7 @@ const Products = ({ isNew, isSale }) => {
     <div className="products">
 
       <div className="filters">
-        <input type="checkbox" name="filters" id="filters-input" />
+        <input type="checkbox" name="filters" id="filters-input" defaultChecked={false} />
         <label htmlFor="filters-input" className='filters-txt'>Filters</label>
 
       <div className="left">
@@ -68,7 +68,7 @@ const Products = ({ isNew, isSale }) => {
 
         <div className="filterItem">
 
-          <h2>Filter by Prices</h2>
+            <h2>Filter by Price</h2>
 
           <div className="inputItem">
             <span>0</span>
@@ -82,7 +82,7 @@ const Products = ({ isNew, isSale }) => {
 
         <div className="filterItem">
 
-          <h2>Sort By</h2>
+            <h2>Sort In</h2>
 
           <div className="inputItem">
             <input type="radio" id="asc" value="asc" name="price" onChange={e=>setSort("asc")}/>
