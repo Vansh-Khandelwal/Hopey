@@ -66,6 +66,7 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Deploy ready
 function App() {
   return (
     <div>
