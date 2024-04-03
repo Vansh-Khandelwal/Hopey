@@ -1,9 +1,9 @@
 # Hopey
-Fully Responsive E-commerce website for fashion store
+Fully Responsive E-commerce website for fashion store <br/>
 Tech Stack Used: ReactJs, Strapi, Scss, Stripe, Supabase(Postgres SQL)
 
-Frontend: https://hopeyy.netlify.app/
-Admin/Backend: https://hopey.onrender.com/admin
+Frontend: https://hopeyy.netlify.app/  <br/>
+Admin/Backend: https://hopey.onrender.com/admin  <br/>
 Database: Supabase(PostGres SQL)
 
 # Home Page
@@ -34,19 +34,19 @@ Database: Supabase(PostGres SQL)
 
 ## Men Category Page
 
-
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/3d401d4c-fe7e-40ed-844c-9b98eb9120ad)
 
 ## Women Category Page
 
-
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/52cadace-8457-416c-95d7-14812a0dfe55)
 
 ## Children Category Page
 
-
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/9acc91a1-87fb-462c-a2ae-ce16e83dda7e)
 
 ## Accessories Category Page
 
-
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/256e6484-db8e-4807-9417-9b9293a121f1)
 
 # Product Page
 
@@ -56,3 +56,14 @@ Database: Supabase(PostGres SQL)
 # Cart Component
 
 ![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/1a91221b-5876-44b4-b160-1ddf1d6fb773)
+
+# Mobile View
+
+## Category Page
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/53732f19-f558-485a-a283-1298e4bddcaf)
+
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/b8559df7-ec46-453d-a74f-fc9057881fc9)
+
+## Product Page
+![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/70e1496f-dc78-44c4-a350-09d3f6861609)
+
