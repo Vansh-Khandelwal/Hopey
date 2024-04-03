@@ -128,3 +128,20 @@
         }
     }
 }
+
+@media screen and (max-width: 830px) {
+    .product {
+        // flex-direction: column;
+        // padding: 10px 20px;
+        .top {
+            flex-direction: column;
+            // .left {
+            //     flex-direction: column;
+            //     .images {
+            //         flex-direction: row;
+            //         flex: auto;
+            //     }
+            // }
+        }
+    }
+}
