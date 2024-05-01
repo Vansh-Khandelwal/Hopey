@@ -6,7 +6,7 @@
     "scripts": {
         "develop": "strapi develop",
         "start": "strapi start",
-        "build": "strapi build",
+        "build": "build",
         "strapi": "strapi"
     },
     "dependencies": {
@@ -19,7 +19,7 @@
         "stripe": "^11.16.0"
     },
     "author": {
-        "name": "A Strapi developer"
+        "name": "Vansh Khandelwal"
     },
     "strapi": {
         "uuid": "097da5b7-072a-4ec8-b8fc-91b2efc3f9aa"
