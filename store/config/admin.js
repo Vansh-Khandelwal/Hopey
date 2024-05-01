@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-    url: 'https://hopey.onrender.com',
+    url: 'https://hopey.onrender.com/admin',
     auth: {
         secret: env('ADMIN_JWT_SECRET'),
     },
