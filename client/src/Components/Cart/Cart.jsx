@@ -48,7 +48,7 @@ const Cart = () => {
             <hr />
             {products?.map(item=>(
                 <div className="item" key={item.id}>
-                    <img src={item.img} alt="" />
+                    <img src={item?.attributes.img.data.attributes.url} alt="" />
                     <div className="details">
                         <h3>{item.title}</h3>
                         <p>{item.desc?.substring(0,100)}</p>
