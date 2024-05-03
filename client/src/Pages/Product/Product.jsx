@@ -58,7 +58,7 @@ const Product = () => {
               <button onClick={e => setQuantity(quantity + 1)}>+</button>
             </div>
 
-            <div className="add" onClick={()=>dispatch(addToCart({
+              <div className="add" onClick={() => dispatch(addToCart({
                 id:data.id,
                 title:data.attributes.title,
                 desc:data.attributes.desc,
