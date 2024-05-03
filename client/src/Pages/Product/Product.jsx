@@ -33,11 +33,14 @@ const Product = () => {
       <div className="top">
           <div className="left">
             <div className="images">
-                <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img")} />
-                <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img2")} />
+                {/* <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img")} />
+                <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img2")} /> */}
+                <img src={data?.attributes?.img?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img")} />
+                <img src={data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={e => setSelectedImg("img2")} />
             </div>
             <div className="mainImg">
-                <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.[selectedImg]?.data?.attributes?.url} alt="" />
+                {/* <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.[selectedImg]?.data?.attributes?.url} alt="" /> */}
+                <img src={data?.attributes?.[selectedImg]?.data?.attributes?.url} alt="" />
             </div>
           </div>
 
