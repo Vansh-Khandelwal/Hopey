@@ -1,7 +1,10 @@
 # Hopey
 Fully Responsive E-commerce website for fashion store <br/>
-Tech Stack Used: ReactJs, Strapi, Scss, Stripe, Supabase(Postgres SQL)
 
+### Tech Stack Used: 
+ReactJs, Strapi, Scss, Stripe, Supabase(Postgres SQL)
+
+### Hosted Links:
 Frontend: https://hopeyy.netlify.app/  <br/>
 Admin/Backend: https://hopey.onrender.com/admin  <br/>
 Database: Supabase(PostGres SQL)
@@ -67,3 +70,11 @@ Database: Supabase(PostGres SQL)
 ## Product Page
 ![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/70e1496f-dc78-44c4-a350-09d3f6861609)
 
+**Improvements**
+
+-> Add Login/Sign Up Users
+-> Loader while in loading state
+
+**Bugs**
+
+-> Cart Image
