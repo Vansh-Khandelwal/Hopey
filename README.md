@@ -10,13 +10,13 @@ Admin/Backend: https://hopey.onrender.com/admin  <br/>
 Database: Supabase(PostGres SQL)
 
 ### Features:
--> Dynamic Website
--> Navbar and Footer
--> Pages UI: Home, Products, Admin(using Strapi)
--> Product Filters by Price and Categories
--> Create, Read, Update and Delete Products
--> Add to Cart 
--> Payment gateway (through Stripe)
+-> Dynamic Website <br />
+-> Navbar and Footer <br />
+-> Pages UI: Home, Products, Admin(using Strapi) <br />
+-> Product Filters by Price and Categories <br />
+-> Create, Read, Update and Delete Products <br />
+-> Add to Cart <br />
+-> Payment gateway (through Stripe) <br />
 
 # Home Page
 
@@ -81,11 +81,11 @@ Database: Supabase(PostGres SQL)
 
 **Improvements**
 
--> Add Login/Sign Up Users
--> Loader while in loading state
--> Contact Page
--> About Page
+-> Add Login/Sign Up Users <br />
+-> Loader while in loading state <br />
+-> Contact Page <br />
+-> About Page <br />
 
 **Bugs**
 
--> Cart Image
+-> Cart Image <br />
