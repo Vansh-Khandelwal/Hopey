@@ -18,7 +18,19 @@ Database: Supabase(PostGres SQL)
 -> Add to Cart <br />
 -> Payment gateway (through Stripe) <br />
 
-# Home Page
+### Improvements
+
+-> Add Login/Sign Up Users <br />
+-> Loader while in loading state <br />
+-> Contact Page <br />
+-> About Page <br />
+-> Make it more responsive <br />
+
+### Bugs
+
+-> Cart Image <br />
+
+## Home Page
 
 ## Hero and Navbar Component
 
@@ -78,15 +90,3 @@ Database: Supabase(PostGres SQL)
 
 ## Product Page
 ![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/70e1496f-dc78-44c4-a350-09d3f6861609)
-
-**Improvements**
-
--> Add Login/Sign Up Users <br />
--> Loader while in loading state <br />
--> Contact Page <br />
--> About Page <br />
--> Make it more responsive <br />
-
-**Bugs**
-
--> Cart Image <br />
