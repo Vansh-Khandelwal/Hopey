@@ -9,6 +9,15 @@ Frontend: https://hopeyy.netlify.app/  <br/>
 Admin/Backend: https://hopey.onrender.com/admin  <br/>
 Database: Supabase(PostGres SQL)
 
+### Features:
+-> Dynamic Website
+-> Navbar and Footer
+-> Pages UI: Home, Products, Admin(using Strapi)
+-> Product Filters by Price and Categories
+-> Create, Read, Update and Delete Products
+-> Add to Cart 
+-> Payment gateway (through Stripe)
+
 # Home Page
 
 ## Hero and Navbar Component
@@ -74,6 +83,8 @@ Database: Supabase(PostGres SQL)
 
 -> Add Login/Sign Up Users
 -> Loader while in loading state
+-> Contact Page
+-> About Page
 
 **Bugs**
 
