@@ -1,5 +1,6 @@
 module.exports = ({ env }) => ({
-    url: env('PUBLIC_URL', 'https://hopey.onrender.com/admin'),
+    port: env.int('PORT', 1337),
+    // url: env('PUBLIC_URL', 'https://localhost:3000/'),
     auth: {
         secret: env('ADMIN_JWT_SECRET'),
     },
