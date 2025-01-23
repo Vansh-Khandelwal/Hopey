@@ -12,7 +12,7 @@ Database: Supabase(PostGres SQL)
 ### Features:
 -> Dynamic Website <br />
 -> Navbar and Footer <br />
--> Pages UI: Home, Products, Admin(using Strapi) <br />
+-> Pages: Home, Products, Admin(using Strapi) <br />
 -> Product Filters by Price and Categories <br />
 -> Create, Read, Update and Delete Products <br />
 -> Add to Cart <br />
