@@ -16,7 +16,6 @@
         "@strapi/strapi": "4.6.2",
         "better-sqlite3": "8.0.1",
         "pg": "8.11.3",
-        "strapi": "3.6.11",
         "stripe": "11.16.0"
     },
     "author": {
