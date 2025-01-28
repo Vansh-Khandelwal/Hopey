@@ -91,3 +91,7 @@ Database: Supabase(PostGres SQL)
 
 ## Product Page
 ![image](https://github.com/Vansh-Khandelwal/Hopey/assets/82869137/70e1496f-dc78-44c4-a350-09d3f6861609)
+
+# Strapi DashBoard
+![image](https://github.com/user-attachments/assets/33297070-d8c3-48f6-bd60-a691a9dc64dd)
+
