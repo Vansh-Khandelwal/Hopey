@@ -1,0 +1,15 @@
+{
+  "name": "supabase",
+  "version": "1.0.0",
+  "description": "Fully Responsive E-commerce website for fashion store <br/>",
+  "main": "ping-supbase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
+    "dotenv": "^16.4.7"
+  }
+}
