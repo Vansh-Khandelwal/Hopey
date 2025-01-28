@@ -6,6 +6,7 @@ module.exports = ({ env }) => ({
         client: "postgres",
         connection: {
             // connectionString: env('DATABASE_URL', 'libsql://hopey-vansh-khandelwal.turso.io'),
+            // turso_token: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJnaWQiOiI4ZDk2ZjM0NC02NWIxLTRmZTMtOWMwOC1lZjQ3N2ZmNWU2MTgiLCJpYXQiOjE3Mzc4ODY2NzF9.B9SQCg2yVJrRJABZ_ILWau - GIAoYKu803tB5N_wQgNemGNf7RxZ3YtWMORJCD6DvVITMn3Nn - OigagmY64CACA
             host: env('DATABASE_HOST', 'aws-0-ap-south-1.pooler.supabase.com'),
             port: env.int('DATABASE_PORT', 5432),
             database: env('DATABASE_NAME', 'postgres'),
