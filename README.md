@@ -17,7 +17,7 @@ Database: Supabase(PostGres SQL)
 -> Create, Read, Update and Delete Products <br />
 -> Add to Cart <br />
 -> Payment gateway (through Stripe) <br />
--> Automated Dtabase Ping Using GitHub WorkFlow/Actions <br />
+-> Automated Database Ping Using GitHub WorkFlow/Actions <br />
 
 ### Improvements
 
