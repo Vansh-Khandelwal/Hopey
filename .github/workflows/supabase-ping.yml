@@ -1,6 +1,11 @@
 name: Supabase Ping
 
 on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'The command to run'
+        required: true
   schedule:
     - cron: 0 9 * * 1,5 # Run every Monday and Friday at 9:00 AM
 
