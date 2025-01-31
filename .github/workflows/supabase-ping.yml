@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install @supabase/supabase-js
+          npm install 
 
       - name: Ping Supabase
         env:
